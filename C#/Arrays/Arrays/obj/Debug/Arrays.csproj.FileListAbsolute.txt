@@ -1,0 +1,6 @@
+/Users/emilybrown/Coding/C#/Arrays/Arrays/bin/Debug/Arrays.exe
+/Users/emilybrown/Coding/C#/Arrays/Arrays/bin/Debug/Arrays.pdb
+/Users/emilybrown/Coding/C#/Arrays/Arrays/obj/Debug/Arrays.csprojResolveAssemblyReference.cache
+/Users/emilybrown/Coding/C#/Arrays/Arrays/obj/Debug/Arrays.csproj.CoreCompileInputs.cache
+/Users/emilybrown/Coding/C#/Arrays/Arrays/obj/Debug/Arrays.exe
+/Users/emilybrown/Coding/C#/Arrays/Arrays/obj/Debug/Arrays.pdb
