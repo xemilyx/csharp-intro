@@ -20,12 +20,17 @@ namespace Sec8Lec67Ex3
                 return;
             }
                 
-            var time = input.Split(':');
+            var timeCheck = CheckTime(input.Split(':'));
 
+            Console.WriteLine(timeCheck);
+            
+        }
+
+        public static string CheckTime(string[] time)
+        {
             if (time.Length != 2)
             {
-                Console.WriteLine("Invalid Time");
-                return;
+                return "Invalid Time";
             }
 
             var hours = Convert.ToInt32(time[0]);
@@ -33,14 +38,12 @@ namespace Sec8Lec67Ex3
 
             if (hours >= 0 && hours <= 23 && minutes >= 0 && minutes <= 59)
             {
-                Console.WriteLine("Ok");
+                return "Ok";
             }
             else
             {
-                Console.WriteLine("Invalid Time");
+                return "Invalid Time";
             }
-
-            
         }
     }
 }

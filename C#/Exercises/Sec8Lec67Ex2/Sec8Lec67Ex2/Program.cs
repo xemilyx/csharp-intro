@@ -14,22 +14,29 @@ namespace Sec8Lec67Ex2
             Console.WriteLine("Enter a series of numbers separated by hyphens: ");
             var input = Console.ReadLine();
 
-            if (!String.IsNullOrEmpty(input))
-            {
-                var numberArray = input.Split('-');
-                var i = 0;
-                while (i < numberArray.Length)
-                {
-                    if (Array.IndexOf(numberArray, numberArray[i], i + 1) != -1)
-                    {
-                        Console.WriteLine("Duplicate");
-                        break;
-                    }
+            if (String.IsNullOrEmpty(input))
+                return;
+            
+            var duplicateExists = DetermineDuplicate(input.Split('-'));
+            
+            if (duplicateExists)
+                Console.WriteLine("Duplicate");
 
-                    i++;
+        }
+
+        public static bool DetermineDuplicate(string[] numberArray)
+        {
+            var i = 0;
+            while (i < numberArray.Length)
+            {
+                if (Array.IndexOf(numberArray, numberArray[i], i + 1) != -1)
+                {
+                    return true;
                 }
-                
+
+                i++;   
             }
+            return false;
         }
     }
 }

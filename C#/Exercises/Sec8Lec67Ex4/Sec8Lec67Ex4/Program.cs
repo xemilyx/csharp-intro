@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Sec8Lec67Ex4
 {
@@ -22,17 +23,26 @@ namespace Sec8Lec67Ex4
                 Console.WriteLine("Error");
                 return;
             }
-            
 
-            var words = new List<string>();
+            var variableName = MakeVariableName(input);
+            Console.WriteLine(variableName);
 
-            foreach (var word in input.Split(' '))
+        }
+
+        public static string MakeVariableName(string phrase)
+        {
+            //var words = new List<string>();
+            var wordBuilder = new StringBuilder();
+
+            foreach (var word in phrase.Split(' '))
             {
-                words.Add(word.ToUpper()[0] + word.Substring(1).ToLower());
+                //words.Add(word.ToUpper()[0] + word.Substring(1).ToLower());
+                wordBuilder.Append(word.ToUpper()[0] + word.Substring(1).ToLower());
             }
-            
-            foreach (var word in words)
-                Console.Write(word);
+
+            return wordBuilder.ToString();
+            //foreach (var word in words)
+            //Console.Write(word);
         }
     }
 }

@@ -12,21 +12,24 @@ namespace Sec8Lec67Ex5
             //So, if the user enters "inadequate", the program should display 6 on the console.
 
             Console.WriteLine("Enter a word: ");
-            var input = Console.ReadLine();
+            var vowelCount = CountVowels(Console.ReadLine().ToLower());
+            Console.WriteLine(vowelCount);
+        }
 
-            var vowels = new List<char> {'a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'};
+        public static int CountVowels(string word)
+        {
+            var vowels = new List<char> {'a', 'e', 'i', 'o', 'u'};
 
             var vowelCount = 0;
             
-            foreach (var letter in input)
+            foreach (var letter in word)
             {
                 if (vowels.Contains(letter))
                 {
                     vowelCount++;
                 }
             }
-            Console.WriteLine(vowelCount);
-
+            return vowelCount;
         }
     }
 }

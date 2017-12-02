@@ -14,28 +14,32 @@ namespace Sec8Lec67Ex1
             //"Consecutive"; otherwise, display "Not Consecutive".
 
             Console.WriteLine("Enter a series of numbers separated by hyphens: ");
-            var input = Console.ReadLine();
+
+            var numbers = Console.ReadLine().Split('-');
             
-            var numbers = input.Split('-');
-
-            var sortedNumbers = new string[numbers.Length];
-            Array.Copy(numbers, sortedNumbers, numbers.Length);
-            Array.Sort(sortedNumbers);
-
-            var consecutive = true;
-
-            for (var i = 0; i < numbers.Length; i++)
-            {
-                if (numbers[i] != sortedNumbers[i])
-                    consecutive = false;
-            }
-            
-            if (consecutive)
+            if (DetermineConsecutive(numbers))
                 Console.WriteLine("Consecutive");
             else
             {
                 Console.WriteLine("Not consecutive");
             }
+        }
+
+        public static bool DetermineConsecutive(string[] numbers)
+        {
+            var sortedNumbers = new string[numbers.Length];
+            Array.Copy(numbers, sortedNumbers, numbers.Length);
+            Array.Sort(sortedNumbers);
+
+            var isConsecutive = true;
+
+            for (var i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] != sortedNumbers[i])
+                    isConsecutive = false;
+            }
+
+            return isConsecutive;
         }
     }
 }
