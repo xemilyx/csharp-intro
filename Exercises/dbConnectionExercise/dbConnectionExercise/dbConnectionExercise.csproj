@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{C391050C-401D-41DC-9F52-6B0E6834C948}</ProjectGuid>
+    <ProjectGuid>{59B2E460-1DA5-454B-AD0B-8848C92C2644}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>StackExercise</RootNamespace>
-    <AssemblyName>StackExercise</AssemblyName>
+    <RootNamespace>dbConnectionExercise</RootNamespace>
+    <AssemblyName>dbConnectionExercise</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -34,7 +34,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stack.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
